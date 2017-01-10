@@ -1,4 +1,7 @@
 class PortfoliosController < ApplicationController
+  
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+
   def index
     @portfolio_items = Portfolio.all
   end
@@ -18,15 +21,12 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portfolio.find(params[:id])
     
     if @portfolio_item.update(portfolio_params)
       redirect_to @portfolio_item
@@ -36,12 +36,15 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
-    @portfolio_item = Portfolio.find(params[:id])
     @portfolio_item.destroy
     redirect_to portfolios_path
   end
 
   private
+
+  def set_portfolio
+    @portfolio_item = Portfolio.find(params[:id])
+  end
 
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image)
