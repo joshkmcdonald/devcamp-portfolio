@@ -15,4 +15,9 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+
+  def copyright_generator
+    McdonaldViewTool::Renderer.copyright 'Josh McDonald', 'All rights reserved'
+  end
 end

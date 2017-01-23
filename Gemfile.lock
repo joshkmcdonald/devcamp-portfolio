@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/joshkmcdonald/mcdonald_view_tool
+  revision: dfbda8c51671f8dc5283b2f893755f87ccef5982
+  specs:
+    mcdonald_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -189,6 +195,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  mcdonald_view_tool!
   pg (~> 0.18)
   pry-rails (~> 0.3.4)
   puma (~> 3.0)
