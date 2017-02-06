@@ -67,6 +67,7 @@ body {
 
 .masthead {
   margin-bottom: 2rem;
+  color: #4682b4;
 }
 
 .masthead-brand {
@@ -200,7 +201,7 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('water.jpeg') no-repeat;
+  background: image-url('home_bg.png') no-repeat;
   background-size: cover;
 }
 
