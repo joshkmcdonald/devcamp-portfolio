@@ -2,8 +2,13 @@
 
   <h2><%= @blog.title %></h2>
 
+  <p>
+  <%= @blog.topic.title %>
+  </p>
+
   <%= link_to font_blog_awesome('edit'), edit_blog_path(@blog) if logged_in?(:site_admin) %> |
   <%= link_to 'Back', blogs_path %>
+
   <p>
     <%= markdown @blog.body %>
   </p>
