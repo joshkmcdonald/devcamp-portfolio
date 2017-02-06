@@ -3,15 +3,6 @@ module BlogsHelper
     image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 40
   end
 
-  def font_blog_awesome(action)
-    case action
-    when 'delete' then fa_icon "trash"
-    when 'edit' then fa_icon "pencil"
-    when 'draft' then fa_icon "eye-slash"
-    when 'published' then fa_icon "eye"
-    end
-  end
-
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
       CodeRay.scan(code,language).div
@@ -30,5 +21,9 @@ module BlogsHelper
 
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
+  end
+
+  def blog_status_color blog
+    'color: red;' if blog.draft?
   end
 end
