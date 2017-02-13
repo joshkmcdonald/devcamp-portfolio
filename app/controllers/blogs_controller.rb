@@ -83,7 +83,11 @@ class BlogsController < ApplicationController
       @blog.draft!
     end
 
-    redirect_to blogs_url, notice: 'Post status has been updated.'
+    if @blog.draft?
+      redirect_to blogs_url, notice: 'Your blog is in draft mode.'
+    else
+      redirect_to blogs_url, notice: 'Your blog is now published.'
+    end
   end
 
   private
