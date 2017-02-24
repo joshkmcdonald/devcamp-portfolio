@@ -168,6 +168,7 @@ GEM
     multi_json (1.12.1)
     multipart-post (2.0.0)
     naught (1.1.0)
+    newrelic_rpm (3.18.1.330)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -318,6 +319,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mcdonald_view_tool (~> 0.1.0)
   mini_magick (~> 4.6)
+  newrelic_rpm
   petergate (~> 1.7)
   pg (~> 0.18)
   pry-rails (~> 0.3.4)
