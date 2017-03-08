@@ -17,9 +17,9 @@
   
   <%= link_to 'Back', blogs_path %>
 
-  <p>
-    <%= markdown @blog.body %>
-  </p>
+  <div>
+    <%= markdown(@blog.body) %>
+  </div>
 
   <%= render 'comments/comment_form' %>
 
